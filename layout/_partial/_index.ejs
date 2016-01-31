@@ -1,0 +1,12 @@
+<% page.posts.each(function(item){ %>
+	<div class="m2 p2">
+		<h2 class="h3">
+			<a href="<%- item.path %>" class="black">
+				<%- item.title %>
+			</a>
+		</h2>
+		<hr class="translu">
+		<%- item.content %>
+	</div>
+	<hr class="stylized">
+<% }) %>

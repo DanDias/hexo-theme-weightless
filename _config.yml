@@ -1,3 +1,8 @@
-piwik_analytics:
-    domain: communistanalytics.com
-    siteId: 1
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+
+#piwik_analytics:
+#    domain: communistanalytics.com
+#    siteId: 1

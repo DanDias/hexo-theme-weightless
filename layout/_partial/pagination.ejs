@@ -1,0 +1,26 @@
+<div class="clearfix">
+	<div class="center">
+		<div class="inline-block overflow-hidden border rounded">
+			<% if (page.prev){ %>
+			<a href="<%- config.root %><%- page.prev_link %>" class="left btn border-right">
+				<svg class="icon" data-icon="chevron-left"></svg>
+				<%= __('prev') %>
+			</a>
+			<% } %>
+			<% if (page.next){ %>
+			<a href="<%- config.root %><%- page.next_link %>" class="right btn">
+				<%= __('next') %>
+				<svg class="icon" data-icon="chevron-right"></svg>
+			</a>
+			<% } %>
+			<div class="overflow-hidden sm-show">
+				<% var shown = 0; %>
+				<% for (var p = 1; p <= page.total; p++) { %>
+					<% if (p != page.current) { %>
+					<a href="<%- config.root %><%= (p == 1) ? '' : 'page/' + p %>" class="left btn border-right"><%= p %></a>
+					<% } %>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</div>

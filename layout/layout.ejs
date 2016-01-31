@@ -1,3 +1,16 @@
 <%- partial('_partial/head') %>
+<body>
+	<div class="container m4">
+		<div class="clearfix">
+			<%- partial('_partial/top') %>
 
-<%- partial('_partial/foot') %>
+			<%- partial('_partial/menu') %>
+			<div class="px4">
+				<%- body %>
+			</div>
+		</div>
+		<%- partial('_partial/pagination', {show: 3}) %>
+	</div>
+	<%- partial('_partial/foot') %>
+</body>
+</html>
