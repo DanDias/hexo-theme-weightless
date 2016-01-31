@@ -1,5 +1,5 @@
 <div class="clearfix">
-	<div class="center">
+	<div class="center mt2">
 		<div class="inline-block overflow-hidden border rounded">
 			<% if (page.prev){ %>
 			<a href="<%- config.root %><%- page.prev_link %>" class="left btn border-right">
@@ -23,7 +23,7 @@
 					<% } %>
 				<% } %>-->
 
-				<% for (var p = 2 * show + 1; p > 0; p--) { %>
+				<% for (var p = show; p > 0; p--) { %>
 					<% if(page.current - p > 0) { %>
 						<% if (page.current - p == 1) { %>
 							<a href="<%- config.root %>" class="left btn border-right">1</a>
