@@ -14,15 +14,6 @@
 			</a>
 			<% } %>
 			<div class="overflow-hidden sm-show">
-				<!--<% if (page.current != 1) { %>
-				<a href="<%- config.root %>" class="left btn border-right">1</a>
-				<% } %>-->
-				<!--<% for (var p = 2; p < page.total; p++) { %>
-					<% if (p != page.current) { %>
-					<a href="<%- config.root %><%= (p == 1) ? '' : 'page/' + p %>" class="left btn border-right"><%= p %></a>
-					<% } %>
-				<% } %>-->
-
 				<% for (var p = show; p > 0; p--) { %>
 					<% if(page.current - p > 0) { %>
 						<% if (page.current - p == 1) { %>
@@ -40,10 +31,6 @@
 						<a href="<%- config.root %>page/<%= page.current + p %>" class="left btn border-right"><%= page.current + p %></a>
 					<% } %>
 				<% } %>
-
-				<!--<% if (page.current != page.total) { %>
-				<a href="<%- config.root %>page/<%= page.total %>" class="left btn border-right"><%= page.total %></a>
-				<% } %>-->
 			</div>
 		</div>
 	</div>
