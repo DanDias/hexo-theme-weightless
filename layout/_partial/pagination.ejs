@@ -14,22 +14,38 @@
 			</a>
 			<% } %>
 			<div class="overflow-hidden sm-show">
+
+				<% if (page.current - p != 1) { %>
+				<a href="<%- config.root %>" class="left btn border-right">1</a>
+				<% } %>
+				<% if (page.current - show > show) { %>
+					<span class="left btn border-right">...</span>
+				<% } %>
+
 				<% for (var p = show; p > 0; p--) { %>
 					<% if(page.current - p > 0) { %>
-						<% if (page.current - p == 1) { %>
-							<a href="<%- config.root %>" class="left btn border-right">1</a>
-						<% }else{ %>
+						<% if (page.current - p != 1) { %>
 							<a href="<%- config.root %>page/<%= page.current - p %>" class="left btn border-right"><%= page.current - p %></a>
 						<% } %>
 					<% } %>
 				<% } %>
 
-				<span class="left btn border-right"><%= page.current %></span>
+				<% if (page.current - p != 1) { %>
+				<span class="left btn border-right muted"><%= page.current %></span>
+				<% } %>
 
 				<% for (var p = 1; p < show + 1; p++) { %>
-					<% if(page.current <= page.total) { %>
+					<% if(page.current + p < page.total) { %>
 						<a href="<%- config.root %>page/<%= page.current + p %>" class="left btn border-right"><%= page.current + p %></a>
 					<% } %>
+				<% } %>
+
+				<% if (page.total - page.current > show + 1) { %>
+					<span class="left btn border-right">...</span>
+				<% } %>
+
+				<% if (page.current != page.total) { %>
+					<a href="<%- config.root %>page/<%= page.total %>" class="left btn border-right"><%= page.total %></a>
 				<% } %>
 			</div>
 		</div>
