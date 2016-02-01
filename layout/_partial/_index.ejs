@@ -1,25 +1,4 @@
-<% page.posts.each(function(item){ %>
-	<div class="m2 p2">
-		<div class="md-col-12">
-			<div class="overflow-hidden bg-white rounded">
-				<div class="p2 white">
-					<h1 class="h2 m0"><a href="<%- url_for(item.path) %>" class="black">
-						<%- item.title %>
-					</a></h1>
-				</div>
-				<div class="p2">
-					<%- item.content %>
-				</div>
-				<div class="p2">
-					<p class="m0 h5">
-						<% for (var i = 0; i < item.tags.data.length; i++) { %>
-							<span class="bold inline-block px1 border rounded"><%- item.tags.data[i].name %></span>
-						<% } %>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<hr class="stylized">
+<% page.posts.each(function(single){ %>
+	<%- partial('article', {item: single, hideNav: true}) %>
 <% }) %>
 <%- partial('_partial/pagination', {show: 2}) %>
