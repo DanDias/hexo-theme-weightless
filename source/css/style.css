@@ -17,3 +17,23 @@ body {
 ::-moz-selection {
   background: #ffb7b7; /* Gecko Browsers */
 }
+
+ul li {
+    list-style-type: none;
+}
+
+table {
+	margin: -1em 0 -2em 0;
+	padding: 0px 0px 0px 0px;
+	overflow: hidden;
+}
+
+td.gutter {
+	padding: 10px 5px 10px 5px;
+	color: #808080;
+	border-right: 1px #808080 solid;
+}
+
+td.code {
+	padding: 10px 10px 10px 20px;
+}
