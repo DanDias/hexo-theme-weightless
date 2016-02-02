@@ -3,6 +3,6 @@ menu:
   Archives: /archives
   Tags: /tags
 
-#piwik_analytics:
-#    domain: communistanalytics.com
-#    siteId: 1
+piwik_analytics:
+    domain: communistanalytics.com
+    siteId: 1
