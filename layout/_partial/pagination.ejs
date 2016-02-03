@@ -2,13 +2,13 @@
 	<div class="center mt2">
 		<div class="inline-block overflow-hidden bg-white border rounded">
 			<% if (page.prev){ %>
-			<a href="<%- base %><%= (page.current > 2 ? ('page/' + (page.current - 1) + '/') : '') %>" class="left btn border-right">
+			<a href="<%- base %><%= (page.current > 2 ? (config.pagination_dir + '/' + (page.current - 1) + '/') : '') %>" class="left btn border-right">
 				<svg class="icon" data-icon="chevron-left"></svg>
 				<%= __('prev') %>
 			</a>
 			<% } %>
 			<% if (page.next){ %>
-			<a href="<%- base %>page/<%= page.current + 1 %>/" class="right btn">
+			<a href="<%- base + config.pagination_dir %>/<%= page.current + 1 %>/" class="right btn">
 				<%= __('next') %>
 				<svg class="icon" data-icon="chevron-right"></svg>
 			</a>
@@ -25,7 +25,7 @@
 				<% for (var p = show; p > 0; p--) { %>
 					<% if(page.current - p > 0) { %>
 						<% if (page.current - p != 1) { %>
-							<a href="<%- base %>page/<%= page.current - p %>/" class="left btn border-right"><%= page.current - p %></a>
+							<a href="<%- base + config.pagination_dir %>/<%= page.current - p %>/" class="left btn border-right"><%= page.current - p %></a>
 						<% } %>
 					<% } %>
 				<% } %>
@@ -36,7 +36,7 @@
 
 				<% for (var p = 1; p < show + 1; p++) { %>
 					<% if(page.current + p < page.total) { %>
-						<a href="<%- base %>page/<%= page.current + p %>/" class="left btn border-right"><%= page.current + p %></a>
+						<a href="<%- base + config.pagination_dir %>/<%= page.current + p %>/" class="left btn border-right"><%= page.current + p %></a>
 					<% } %>
 				<% } %>
 
@@ -45,7 +45,7 @@
 				<% } %>
 
 				<% if (page.current != page.total) { %>
-					<a href="<%- base %>page/<%= page.total %>/" class="left btn border-right"><%= page.total %></a>
+					<a href="<%- base + config.pagination_dir%>/<%= page.total %>/" class="left btn border-right"><%= page.total %></a>
 				<% } %>
 			</div>
 		</div>
