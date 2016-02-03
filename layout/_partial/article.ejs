@@ -21,14 +21,14 @@
 					<div class="left">
 						<% for (var i = 0; i < item.tags.data.length; i++) { %>
 							<script type="text/javascript">
-								document.write('<span class="h6 bold inline-block px1 '+chooseOne(colors)+' rounded"><%- item.tags.data[i].name %></span>');
+								document.write('<span onclick="window.location=\'' + ' <%= url_for(item.tags.data[i].path) %> ' + '\'" class="clickable h6 bold inline-block px1 '+chooseOne(colors)+' rounded"><%- item.tags.data[i].name %></span>');
 							</script>
 						<% } %>
 					</div>
 					<div class="right"><span class="h6 muted black"><%
 						var length = item.categories.length;
 						item.categories.forEach(function(cat, index) { %>
-						<%= cat.name + (index != length - 1  ? ', ' : '') %>
+						<a class="link" href="<%= url_for(cat.path) %>"><%= cat.name %></a><%= (index != length - 1  ? ', ' : '') %>
 					<% }) %> </span></div>
 				</div>
 			</div>
