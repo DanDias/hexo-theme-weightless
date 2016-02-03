@@ -1,5 +1,5 @@
 <div class="mt2 mb2<%= page.types == 'page' ? ' py2' : '' %>">
-	<% if (page.types == 'tags') { %>
+	<% if (page.types !== 'pages') { %>
 	<div class="mxn1 mb2">
 		<span class="btn button-narrow">Tags</span>
 		<svg class="icon gray" data-icon="chevron-right"></svg>
