@@ -16,16 +16,18 @@ site.posts.forEach(function(item, index) {
 	<span class="btn button-narrow">Archives</span>
 	<svg class="icon gray" data-icon="chevron-right"></svg>
 </div>
-<% posts.forEach(function(single, year) { %>
-	<div class="col-12 bg-white rounded mb4">
-		<span class="btn block border-bottom muted"><%- year %></span>
-		<% var length = single.length;
-		single.forEach(function(item, index) { %>
-		<a href="<%- url_for(item.path) %>" class="btn block<%- (index != length - 1 ? ' border-bottom' : '') %>"><%- item.title %>
-			<span class="h6 muted black">
-				<%- date(item.date, "MMM D YYYY")%>
-			</span>
-		</a>
-		<% }) %>
-	</div>
-<% }) %>
+<div class="mt2 mb2 py2">
+	<% posts.forEach(function(single, year) { %>
+		<div class="col-12 bg-white rounded mb4">
+			<span class="btn block border-bottom muted"><%- year %></span>
+			<% var length = single.length;
+			single.forEach(function(item, index) { %>
+			<a href="<%- url_for(item.path) %>" class="btn block<%- (index != length - 1 ? ' border-bottom' : '') %>"><%- item.title %>
+				<span class="h6 muted black">
+					<%- date(item.date, "MMM D YYYY")%>
+				</span>
+			</a>
+			<% }) %>
+		</div>
+	<% }) %>
+</div>
