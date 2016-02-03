@@ -22,7 +22,7 @@ ul li {
     list-style-type: none;
 }
 
-table {
+.highlight table {
 	margin: -1em 0 -2em 0;
 	padding: 0px 0px 0px 0px;
 	overflow: hidden;
