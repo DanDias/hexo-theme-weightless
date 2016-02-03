@@ -1,10 +1,10 @@
-<div class="mt2 mb2<%= page.types == 'page' ? ' py2' : '' %>">
-	<% if (page.types !== 'pages') { %>
-	<div class="mxn1 mb2">
-		<span class="btn button-narrow">Tags</span>
-		<svg class="icon gray" data-icon="chevron-right"></svg>
-	</div>
-	<% } %>
+<% if (page.types) { %>
+<div class="mxn1 mt2 mb2">
+	<span class="btn button-narrow">Tags</span>
+	<svg class="icon gray" data-icon="chevron-right"></svg>
+</div>
+<% } %>
+<div class="mt2 mb2<%= (page.types) ? '' : ' py2' %>">
 	<div class="md-col-12">
 		<div class="overflow-hidden bg-white rounded">
 			<% if (page.types == 'tags') { %>
