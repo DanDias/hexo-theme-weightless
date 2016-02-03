@@ -9,6 +9,14 @@
 		<div class="flex-auto border-bottom">
 			Rocking <a href="http://www.basscss.com/" class="btn block">Basscss</a>
 		</div>
+		<div class="flex-auto border-bottom">
+			<% if (config.feed) { %>
+				<a href="<%- url_for(config.feed.path) %>" class="btn block">RSS</a>
+			<% } %>
+			<% if (config.sitemap) { %>
+				<a href="<%- url_for(config.sitemap.path) %>" class="btn block">Sitemap</a>
+			<% } %>
+		</div>
 	</div>
 </div>
 <script type="text/javascript">
