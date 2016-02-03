@@ -4,6 +4,6 @@
 	<span class="btn button-narrow"><%= page.tag %></span>
 </div>
 <% page.posts.each(function(single){ %>
-	<%- partial('_partial/article', {item: single, hideNav: true}) %>
+	<%- partial('_partial/article', {item: single, hideNav: true, noPadding: true}) %>
 <% }) %>
 <%- partial('_partial/pagination', {base: url_for(page.base), show: 2}) %>
