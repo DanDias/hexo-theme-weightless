@@ -1,7 +1,7 @@
 menu:
   Home: /
-  Archives: archives
-  Tags: tags
+  Archives: archives/
+  Tags: tags/
 
 piwik_analytics:
     domain: communistanalytics.com
