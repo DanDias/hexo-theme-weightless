@@ -2,7 +2,7 @@
 	<div class="center mt2">
 		<div class="inline-block overflow-hidden bg-white border rounded">
 			<% if (page.prev){ %>
-			<a href="<%- base %>page/<%= page.current - 1 %>/" class="left btn border-right">
+			<a href="<%- base %><%= (page.current > 2 ? ('page/' + (page.current - 1) + '/') : '') %>" class="left btn border-right">
 				<svg class="icon" data-icon="chevron-left"></svg>
 				<%= __('prev') %>
 			</a>
