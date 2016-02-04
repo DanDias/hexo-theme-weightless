@@ -19,7 +19,7 @@ I just thought this looks nice.
 
 ## Search
 
-If you want search support with this theme, install `hexo-generator-lunr`. After the installation 
+If you want search support with this theme, install `hexo-generator-lunr`. After the installation, do `hexo generate` again, and you will have this feature enable automagically. 
 
 ---
 
