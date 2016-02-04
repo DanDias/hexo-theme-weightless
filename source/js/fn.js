@@ -1,7 +1,8 @@
 var index,
 	store;
 
-function loadJQuery(href) {
+function loadJQuery(href, e) {
+	e.preventDefault();
 	if (!window.jQuery) {
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
