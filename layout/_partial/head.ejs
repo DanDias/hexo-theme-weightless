@@ -25,15 +25,4 @@
 
 	<!--[if lt IE 9]><script src="<%- config.root %>js/html5.js" type="text/javascript"></script><![endif]-->
 	<script src="<%= url_for('js/main.js') %>" type="text/javascript"></script>
-
-	<% if (config.lunr) { %>
-		<link rel="stylesheet" href="https://jerry.sh/jquery.modal.css" type="text/css">
-		<script type="text/javascript">
-			var jQueryJS = '<%= url_for('js/jquery-2.2.0.js') %>';
-			var modalJS = '<%= url_for('js/jquery.modal.js') %>';
-			var lunrJS = '<%= url_for('js/lunr.js') %>';
-			var lunrAsset = '<%= url_for(config.lunr.path + 'all.json') %>';
-		</script>
-		<script src="<%= url_for('js/fn.js') %>" type="text/javascript"></script>
-	<% } %>
 </head>
