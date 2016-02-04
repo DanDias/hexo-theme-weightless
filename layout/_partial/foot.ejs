@@ -16,13 +16,13 @@
 		</div>
 	</div>
 </div>
-<script src="<%- config.root %>js/geomicons.js"></script>
+<script src="<%= url_for('js/geomicons.js') %>"></script>
 <script type="text/javascript">
 	var icons = document.querySelectorAll('[data-icon]');
 	geomicons.inject(icons);
 </script>
 <% if (config.lunr) { %>
-	<link rel="stylesheet" href="https://jerry.sh/jquery.modal.css" type="text/css">
+	<link rel="stylesheet" href="<%= url_for('css/jquery.modal.css') %>" type="text/css">
 	<script type="text/javascript">
 		var jQueryJS = '<%= url_for('js/jquery-2.2.0.js') %>';
 		var modalJS = '<%= url_for('js/jquery.modal.js') %>';
