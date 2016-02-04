@@ -1,5 +1,7 @@
 ## Hexo Weightless
 
+![Demo Image](https://hexo.fifo.fmt01.sdapi.net/weightless.png)
+
 A theme by Jerry Chen.
 
 Made with Basscss.
