@@ -2,21 +2,25 @@ var index,
 	store;
 
 function loadJQuery(href) {
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.src = jQueryJS;
-	document.getElementsByTagName("head")[0].appendChild(script);
-	var checkReady = function(callback) {
-        if (window.jQuery) {
-            callback(jQuery);
-        }
-        else {
-            window.setTimeout(function() { checkReady(callback); }, 100);
-        }
-    };
-	checkReady(function() {
-		loadMore(href);
-	});
+	if (!window.jQuery) {
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = jQueryJS;
+		document.getElementsByTagName("head")[0].appendChild(script);
+		var checkReady = function(callback) {
+	        if (window.jQuery) {
+	            callback(jQuery);
+	        }
+	        else {
+	            window.setTimeout(function() { checkReady(callback); }, 100);
+	        }
+	    };
+		checkReady(function() {
+			loadMore(href);
+		});
+	}else{
+		loadModal(href);
+	}
 }
 
 function loadMore(href) {
@@ -37,6 +41,10 @@ function loadLunr(href) {
 		store = response.store,
 		index = lunr.Index.load(response.index);
 
-		$(href).modal();
+		loadModal(href);
 	});
+}
+
+function loadModal(href) {
+	$(href).modal();
 }
