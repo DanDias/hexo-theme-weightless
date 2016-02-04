@@ -47,5 +47,5 @@ function loadLunr(href) {
 }
 
 function loadModal(href) {
-	$(href).modal();
+	console.log($(href).modal());
 }
