@@ -10,10 +10,16 @@ Made with Basscss.
 
 I just thought this looks nice.
 
+---
+
 ## Tags Cloud
 
 1. Create a page named `tags`
 2. Edit tags page, set page type to `tags`
+
+## Search
+
+If you want search support with this theme, install `hexo-generator-lunr`. After the installation 
 
 ---
 
