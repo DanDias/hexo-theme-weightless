@@ -21,7 +21,7 @@
 					<div class="left">
 						<% for (var i = 0; i < item.tags.data.length; i++) { %>
 							<script type="text/javascript">
-								document.write('<a href="<%= url_for(item.tags.data[i].path) %>" class="muted h6 mb1 bold btn btn-outline '+chooseOne(colors)+'"><%- item.tags.data[i].name %></a>');
+								document.write('<a href="<%= url_for(item.tags.data[i].path) %>" class="muted h6 mb1 bold btn btn-outline '+chooseOne(colors)+'"><%= item.tags.data[i].name %></a>');
 								//document.write('<span onclick="window.location=\'' + ' <%= url_for(item.tags.data[i].path) %> ' + '\'" class="clickable h6 bold inline-block px1 '+chooseOne(colors)+' rounded"><%- item.tags.data[i].name %></span>');
 							</script>
 						<% } %>
