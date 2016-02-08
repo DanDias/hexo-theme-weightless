@@ -6,3 +6,5 @@ menu:
 piwik_analytics:
     domain: communistanalytics.com
     siteId: 1
+
+useGoogle: false
