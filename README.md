@@ -1,6 +1,6 @@
 ## Hexo Weightless
 
-![Demo Image](https://hexo.fifo.fmt01.sdapi.net/weightless.png)
+![Demo Image](https://hexo.s3.fmt01.sdapi.net/weightless.png)
 
 A theme by Jerry Chen.
 
