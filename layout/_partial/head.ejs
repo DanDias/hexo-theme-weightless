@@ -29,6 +29,9 @@
 	<% }else{ %>
 		<link href="https://g.mirror.sh/gapi/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 	<% } %>
+	<% if (config.google_site_verification) { %>
+		<meta name="google-site-verification" content="<%= config.google_site_verification %>" />
+	<% } %>
 
 	<!--[if lt IE 9]><script src="<%- config.root %>js/html5.js" type="text/javascript"></script><![endif]-->
 	<script src="<%= url_for('js/main.js') %>" type="text/javascript"></script>
