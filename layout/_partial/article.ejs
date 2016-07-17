@@ -51,4 +51,25 @@
 		<% } %>
 	</div>
 	<% } %>
+	<% if (typeof index !== 'undefined' && index === false && typeof config.disqus_shortname !== 'undefined' && config.disqus_shortname.length > 0) { %>
+	<div class="md-col-12 mt2">
+		<div class="overflow-hidden bg-white rounded">
+			<div class="m1 p2 white">
+				<div id="disqus_thread"></div>
+				<script>
+				    var disqus_shortname = '<%= config.disqus_shortname %>';
+				    (function() {  // DON'T EDIT BELOW THIS LINE
+				        var d = document, s = d.createElement('script');
+
+				        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+				        s.setAttribute('data-timestamp', +new Date());
+				        (d.head || d.body).appendChild(s);
+				    })();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+		</div>
+	</div>
+	<% } %>
 </div>
