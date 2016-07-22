@@ -2,7 +2,7 @@
 
 ![Demo Image](https://hexo.s3.fmt01.sdapi.net/weightless.png)
 
-A theme by Jerry Chen.
+A theme by Rachel Chen.
 
 Made with Basscss.
 
@@ -26,6 +26,7 @@ If you want search support with this theme, install `hexo-generator-lunr`. After
 * Caveat
   * If you use `npm install hexo-generator-lunr`, it will install the package from [o2team](https://github.com/o2team/hexo-generator-lunr), which only indexes the excerpt of post.
   * Therefore, if you want full text search, use [my fork](https://git.fm/zllovesuki/hexo-generator-lunr).
+  * If you are running Hexo 3.2.2, and you are running your Hexo in a folder, your permalink may have repeated subfolder (e.g. /blog becomes /blog/blog). The latest `hexo@beta` solves this problem.
 
 ---
 
