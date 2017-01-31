@@ -7,4 +7,6 @@ piwik_analytics:
     domain: communistanalytics.com
     siteId: 1
 
-useGoogle: false
+useGoogle: true
+
+google_analytics: UA-91171801-1
